@@ -15,11 +15,17 @@ Create a natural language SQL query system for finance data. Users can ask quest
 ## Folder Structure
 
 task-05-sql-qa/
+
 │
+
 ├── task5_sql_qa.ipynb       # Main notebook with SQL QA system
+
 ├── finance.db               # SQLite database (clients + investments)
+
 ├── query_summaries/         # Folder to store query results
+
 └── README.md                # Project documentation
+
 
 ## Setup Instructions
 
@@ -59,8 +65,8 @@ execute_sql(cursor, sql) runs the query on the SQLite database and returns raw r
 
 Query results are saved into the query_summaries/ folder as text files:
 
-query_1_results.txt
-query_2_results.txt
+query_1_summary.txt
+query_2_summary.txt
 ...
 <img width="710" height="483" alt="image" src="https://github.com/user-attachments/assets/fcdde9ca-33ac-4f37-8d20-70e767f34b1c" />
 
