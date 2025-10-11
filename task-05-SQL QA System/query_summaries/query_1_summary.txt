@@ -1,0 +1,7 @@
+Question: List clients with portfolio value over 50 lakh.
+
+SQL: SELECT * FROM clients 
+WHERE portfolio_value > 500000;
+
+Summary:
+⚠️ Error executing SQL: Cannot operate on a closed database.

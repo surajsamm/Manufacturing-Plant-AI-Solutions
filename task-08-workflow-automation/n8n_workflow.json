@@ -1,0 +1,313 @@
+{
+  "name": "Alert",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "langchain-alert",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -1184,
+        -128
+      ],
+      "id": "2827fa80-8f2f-4fcd-b117-c01b1b4eaa90",
+      "webhookId": "5680a43b-fed3-4f88-9e6f-5dd0a542a938"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.downtime_hours }}",
+              "operation": "larger",
+              "value2": 4
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "name": "IF Downtime > 4h",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -976,
+        -128
+      ],
+      "id": "c8974fad-876f-4045-a36b-437a7b90db25"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1aEJPQDHLXoxOyWkXIwRGMFVMDIiVjlu5783Bsc8HVs8",
+          "mode": "list",
+          "cachedResultName": "False sheet",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1aEJPQDHLXoxOyWkXIwRGMFVMDIiVjlu5783Bsc8HVs8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1aEJPQDHLXoxOyWkXIwRGMFVMDIiVjlu5783Bsc8HVs8/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Machine_id": "={{ $json.machine_id }}",
+            "Downtime_hours": "={{ $json.downtime_hours }}",
+            "Reason": "={{ $json.reason }}",
+            "Timestamp": "={{ $json.timestamp }}",
+            "Location": "={{ $json.location }}"
+          },
+          "matchingColumns": [
+            "Machine_id"
+          ],
+          "schema": [
+            {
+              "id": "Machine_id",
+              "displayName": "Machine_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Downtime_hours",
+              "displayName": "Downtime_hours",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reason",
+              "displayName": "Reason",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Timestamp",
+              "displayName": "Timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Location",
+              "displayName": "Location",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -688,
+        -112
+      ],
+      "id": "cbc420a0-329a-48bf-9617-e6c25041bfec",
+      "name": "All Data",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "thOhrgQwUcC5RamE",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "cocsamcoc69@gmail.com",
+        "subject": "=🚨 URGENT: Machine {{ $json.machine_id }} Downtime Exceeded 4 Hours",
+        "message": "=<div style=\"font-family: Arial, sans-serif; padding: 20px;\">\n  <h2 style=\"color: #d63031;\">🚨 CRITICAL MACHINE DOWNTIME ALERT</h2>\n  \n  <div style=\"background: #fff3cd; padding: 15px; border-left: 4px solid #ffc107;\">\n    <h3>Machine {{ $json.machine_id }} has been down for {{ $json.downtime_hours }} hours</h3>\n    <p><strong>Location:</strong> {{ $json.location }}</p>\n    <p><strong>Reason:</strong> {{ $json.reason }}</p>\n    <p><strong>Time:</strong> {{ $json.timestamp }}</p>\n  </div>\n  \n  <p style=\"color: #721c24;\"><strong>⚠️ Immediate attention required!</strong></p>\n  \n  <div style=\"margin-top: 20px; padding: 10px; background: #f8f9fa;\">\n    <small>This alert was automatically generated by Production Monitoring System</small>\n  </div>\n</div>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -688,
+        -256
+      ],
+      "id": "0e21dc53-4119-45c1-9907-09a0f4300557",
+      "name": "Gamil",
+      "webhookId": "025cda1f-3848-4a71-922c-90c4af0a4626",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "JYIvwrJOpZwtuRf0",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "machine_id": "MACH-101",
+          "downtime_hours": 8,
+          "reason": "Complete electrical failure - needs parts replacement",
+          "location": "Factory-A",
+          "timestamp": "2024-01-15 08:00:00"
+        }
+      },
+      {
+        "json": {
+          "machine_id": "PRESS-205",
+          "downtime_hours": 6.5,
+          "reason": "Hydraulic pump seizure - emergency maintenance",
+          "location": "Factory-B",
+          "timestamp": "2024-01-15 11:30:00"
+        }
+      },
+      {
+        "json": {
+          "machine_id": "ROBOT-303",
+          "downtime_hours": 12,
+          "reason": "Control system OS crash - IT team investigating",
+          "location": "Assembly-Line-1",
+          "timestamp": "2024-01-14 22:00:00"
+        }
+      },
+      {
+        "json": {
+          "machine_id": "MACH-102",
+          "downtime_hours": 3,
+          "reason": "Scheduled monthly maintenance",
+          "location": "Factory-A",
+          "timestamp": "2024-01-15 09:00:00"
+        }
+      },
+      {
+        "json": {
+          "machine_id": "CONVEYOR-401",
+          "downtime_hours": 1.5,
+          "reason": "Belt replacement - completed quickly",
+          "location": "Packaging-Line",
+          "timestamp": "2024-01-15 14:15:00"
+        }
+      },
+      {
+        "json": {
+          "machine_id": "CUTTER-506",
+          "downtime_hours": 0.5,
+          "reason": "Blade calibration and alignment",
+          "location": "Cutting-Section",
+          "timestamp": "2024-01-15 16:00:00"
+        }
+      },
+      {
+        "json": {
+          "machine_id": "MACH-204",
+          "downtime_hours": 4,
+          "reason": "Extended cleaning and inspection",
+          "location": "Factory-B",
+          "timestamp": "2024-01-15 10:00:00"
+        }
+      },
+      {
+        "json": {
+          "machine_id": "WELDER-307",
+          "downtime_hours": 4.25,
+          "reason": "Gas line leak repair took longer than expected",
+          "location": "Welding-Bay",
+          "timestamp": "2024-01-15 13:45:00"
+        }
+      },
+      {
+        "json": {
+          "machine_id": "LINE-A-MULTI",
+          "downtime_hours": 7,
+          "reason": "Multiple machine coordination issue - production line halted",
+          "location": "Main-Production-Line",
+          "timestamp": "2024-01-15 07:30:00"
+        }
+      },
+      {
+        "json": {
+          "machine_id": "FURNACE-601",
+          "downtime_hours": 48,
+          "reason": "Weekend refractory repair - planned extended downtime",
+          "location": "Heat-Treatment-Zone",
+          "timestamp": "2024-01-13 18:00:00"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "IF Downtime > 4h",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Downtime > 4h": {
+      "main": [
+        [
+          {
+            "node": "Gamil",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "All Data",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "All Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "9255bd9f-027b-4970-8606-ece78554fecf",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "bc46fb6cfa8d3f4d382d2065a176b6907c2577fd43d92fdd6074e680f34fa1bb"
+  },
+  "id": "kV9i0qqmxXVoutiN",
+  "tags": []
+}

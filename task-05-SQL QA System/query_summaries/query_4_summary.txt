@@ -1,0 +1,8 @@
+Question: Find the total invested amount by each client.
+
+SQL: SELECT client_id, SUM(investment_amount) AS total_invested_amount 
+FROM investments 
+GROUP BY client_id;
+
+Summary:
+⚠️ Error executing SQL: Cannot operate on a closed database.

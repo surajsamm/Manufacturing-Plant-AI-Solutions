@@ -1,0 +1,8 @@
+Question: Show investments in 'Alpha Fund' over 1 lakh.
+
+SQL: SELECT * 
+FROM investments 
+WHERE fund_name = 'Alpha Fund' AND amount > 100000;
+
+Summary:
+⚠️ Error executing SQL: Cannot operate on a closed database.

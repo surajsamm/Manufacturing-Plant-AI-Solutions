@@ -1,0 +1,11 @@
+Question: Which clients are high-risk and have more than 2 investments?
+
+SQL: SELECT c.*
+FROM clients c
+JOIN investments i ON c.client_id = i.client_id
+WHERE c.risk_level = 'high'
+GROUP BY c.client_id
+HAVING COUNT(i.investment_id) > 2;
+
+Summary:
+⚠️ Error executing SQL: Cannot operate on a closed database.
