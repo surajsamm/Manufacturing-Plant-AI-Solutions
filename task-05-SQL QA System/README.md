@@ -1,4 +1,7 @@
 # Task 5: SQL QA System (Clients & Investments)
+<img width="718" height="504" alt="image" src="https://github.com/user-attachments/assets/73055d63-3cd4-40a2-ad32-078e8aff0875" />
+
+
 
 ## Objective
 Create a natural language SQL query system for finance data. Users can ask questions in plain English, and the system will:
@@ -59,6 +62,8 @@ Query results are saved into the query_summaries/ folder as text files:
 query_1_results.txt
 query_2_results.txt
 ...
+<img width="710" height="483" alt="image" src="https://github.com/user-attachments/assets/fcdde9ca-33ac-4f37-8d20-70e767f34b1c" />
+
 
 **Example Usage**
 questions = [
