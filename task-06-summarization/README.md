@@ -25,16 +25,26 @@ Summarize large operational and compliance documents (e.g., safety audits, maint
 
 2. **Chunking Mechanism**
    - Large documents are split into smaller **chunks** (e.g., 2000 characters with 200-character overlap) using **LangChain’s `RecursiveCharacterTextSplitter`**.
+
+<img width="353" height="289" alt="image" src="https://github.com/user-attachments/assets/415a1cc5-6df2-41a2-84d7-c8c88d932db8" />
+
    - **Overlap** ensures continuity between chunks so context isn’t lost between sections.
    - Each chunk is summarized individually by the Groq LLaMA model and then combined.
 
-3. **Supported Document Types**
+4. **Supported Document Types**
+
+   <img width="982" height="130" alt="image" src="https://github.com/user-attachments/assets/0a4df681-53be-4cae-bdb3-e1f2bb45c2a6" />
+
    - PDF (`.pdf`)
    - Text (`.txt`)
 
-4. **Output**
+5. **Output**
    - Summaries are combined into a single file: `final_summary.txt`
    - Prints a preview of the summary in console.
+     
+<img width="765" height="366" alt="image" src="https://github.com/user-attachments/assets/77aef02e-1cbb-4145-911c-6b7cc9930b69" />
+
+<img width="1493" height="746" alt="image" src="https://github.com/user-attachments/assets/a45d6889-7681-48bb-860b-72687f4c9c58" />
 
 ---
 
