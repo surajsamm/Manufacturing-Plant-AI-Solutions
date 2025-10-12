@@ -27,27 +27,6 @@ This solution implements a **Retrieval-Augmented Generation (RAG)** system for *
 
 📂 **[Click here to explore Task 3](https://github.com/GautamAnandDS/Manufacturing-Plant-AI-Solutions/tree/master/Task%203%20RAG%20-%20Part%201%20(Basic%20Document%20QA))**
 
----
-
-## How to Use This Repository
-
-1. Browse the tasks by clicking on the corresponding folders above.
-2. Each folder contains:
-
-   * The full solution code
-   * Instructions for setup and usage
-   * Examples of input and output
-3. Follow the instructions in each task’s README to run and test the solution.
-
----
-
-## Requirements
-
-* Python 3.11+
-* Relevant packages are listed in each task folder’s `requirements.txt`.
-* Access to APIs or external tools may be required for Task 2.
-
----
 
 ### 📁 Task 05: SQL QA System (E-commerce / Manufacturing Data)
 
@@ -84,7 +63,7 @@ Query structured manufacturing and supply chain data using natural language.
 - "Find the machine with the highest defect rate."
   
 📂 **[Click here to explore Task 5](https://github.com/surajsamm/gg/tree/main/task-05-SQL%20QA%20System))**
----
+
 
 ### 📁 Task 06: Summarization Engine
 
@@ -111,6 +90,8 @@ Summarize large operational or compliance documents into concise reports.
 - os
 
 ---
+📂 **[Click here to explore Task 3](https://github.com/GautamAnandDS/Manufacturing-Plant-AI-Solutions/tree/master/Task%203%20RAG%20-%20Part%201%20(Basic%20Document%20QA))**
+
 
 ## 📁 Task 08: Workflow Automation with n8n
 
@@ -142,6 +123,7 @@ Automate alerts and supplier communications based on operational data.
 - Webhook endpoint for LangChain data
 
 ---
+📂 **[Click here to explore Task 3](https://github.com/GautamAnandDS/Manufacturing-Plant-AI-Solutions/tree/master/Task%203%20RAG%20-%20Part%201%20(Basic%20Document%20QA))**
 
 ## ⚡ Getting Started
 
