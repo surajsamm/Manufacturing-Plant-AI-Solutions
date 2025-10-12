@@ -27,6 +27,7 @@ This solution implements a **Retrieval-Augmented Generation (RAG)** system for *
 
 📂 **[Click here to explore Task 3](https://github.com/GautamAnandDS/Manufacturing-Plant-AI-Solutions/tree/master/Task%203%20RAG%20-%20Part%201%20(Basic%20Document%20QA))**
 
+---
 
 ### 📁 Task 05: SQL QA System (E-commerce / Manufacturing Data)
 
@@ -64,6 +65,7 @@ Query structured manufacturing and supply chain data using natural language.
   
 📂 **[Click here to explore Task 5](https://github.com/surajsamm/gg/tree/main/task-05-SQL%20QA%20System))**
 
+---
 
 ### 📁 Task 06: Summarization Engine
 
@@ -89,9 +91,10 @@ Summarize large operational or compliance documents into concise reports.
 - PyPDF2 or pypdf
 - os
 
----
-📂 **[Click here to explore Task 3](https://github.com/GautamAnandDS/Manufacturing-Plant-AI-Solutions/tree/master/Task%203%20RAG%20-%20Part%201%20(Basic%20Document%20QA))**
 
+📂 **[Click here to explore Task 6](https://github.com/surajsamm/gg/tree/main/task-06-summarization)**
+
+---
 
 ## 📁 Task 08: Workflow Automation with n8n
 
@@ -122,12 +125,10 @@ Automate alerts and supplier communications based on operational data.
 - Slack / Gmail / Google Sheet integrations
 - Webhook endpoint for LangChain data
 
+
+📂 **[Click here to explore Task 8](https://github.com/surajsamm/gg/tree/main/task-08-workflow-automation)**
+
 ---
-📂 **[Click here to explore Task 3](https://github.com/GautamAnandDS/Manufacturing-Plant-AI-Solutions/tree/master/Task%203%20RAG%20-%20Part%201%20(Basic%20Document%20QA))**
 
-## ⚡ Getting Started
 
-1. Clone the repository:
-```bash
-git clone <repo-url>
 
