@@ -82,7 +82,7 @@ Query structured manufacturing and supply chain data using natural language.
 - "Which machines have efficiency below 92?"
 - "Show total units produced by each machine."
 - "Find the machine with the highest defect rate."
-
+📂 **[Click here to explore Task 5]([https://github.com/GautamAnandDS/Manufacturing-Plant-AI-Solutions/tree/master/Task%203%20RAG%20-%20Part%201%20(Basic%20Document%20QA)](https://github.com/surajsamm/gg/tree/main/task-05-SQL%20QA%20System))**
 ---
 
 ### 📁 Task 06: Summarization Engine
