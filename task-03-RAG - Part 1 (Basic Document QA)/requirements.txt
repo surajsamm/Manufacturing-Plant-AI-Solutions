@@ -1,0 +1,12 @@
+pyyaml
+pypdf
+langchain
+langchain_community
+faiss-cpu
+sentence-transformers
+transformers
+tqdm
+streamlit
+python-dotenv
+google-generativeai
+langchain_core

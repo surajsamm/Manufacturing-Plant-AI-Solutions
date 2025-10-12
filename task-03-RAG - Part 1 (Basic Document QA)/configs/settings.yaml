@@ -1,0 +1,6 @@
+pdf_path: "data/SOP_Hazardous_Processes.pdf"
+index_path: "index/sop_faiss_index"
+chunk_size: 500
+chunk_overlap: 100
+retrieval_k: 3
+llm_model: "gemini-2.5-flash"
