@@ -49,3 +49,102 @@ This solution implements a **Retrieval-Augmented Generation (RAG)** system for *
 
 ---
 
+### 📁 Task 05: SQL QA System (E-commerce / Manufacturing Data)
+
+**Objective:**  
+Query structured manufacturing and supply chain data using natural language.
+
+**Database Schema:**
+- `clients(client_id, name, age, risk_profile, portfolio_value)`
+- `investments(investment_id, client_id, fund_name, amount_invested, date)`
+- `machines(id, name, uptime_hours, downtime_hours, efficiency)`
+- `suppliers(id, name, material, delivery_time, reliability_score)`
+
+**Key Features:**
+- Translate natural language questions into SQL queries using LangChain.
+- Execute SQL queries on SQLite database.
+- Return answers in human-readable format.
+
+**Usage:**
+1. Load sample SQLite database with `clients`, `investments`, `machines`, `suppliers`.
+2. Use `generate_sql(question)` to generate SQL queries.
+3. Execute queries with `execute_sql_and_summarize()` function.
+4. Summaries of queries are saved in the `query_summaries/` folder.
+
+**Dependencies:**
+- Python 3.11+
+- langchain
+- groq
+- sqlite3
+
+**Example Questions:**
+- "List suppliers with delivery delays over 5 days and reliability score < 70."
+- "Which machines have efficiency below 92?"
+- "Show total units produced by each machine."
+- "Find the machine with the highest defect rate."
+
+---
+
+### 📁 Task 06: Summarization Engine
+
+**Objective:**  
+Summarize large operational or compliance documents into concise reports.
+
+**Key Features:**
+- Load PDFs or text files from `sample_documents/`.
+- Split large documents into manageable chunks using `RecursiveCharacterTextSplitter`.
+- Summarize each chunk using **Groq LLaMA 3.3-70b-versatile** model.
+- Combine summaries into a final report (`final_summary.txt`).
+
+**Workflow:**
+1. Load documents using `PyPDFLoader` or `TextLoader`.
+2. Split documents into chunks for large files.
+3. Summarize each chunk individually using Groq API.
+4. Merge summaries for a consolidated overview.
+
+**Dependencies:**
+- Python 3.11+
+- langchain
+- groq
+- PyPDF2 or pypdf
+- os
+
+---
+
+## 📁 Task 08: Workflow Automation with n8n
+
+**Objective:**  
+Automate alerts and supplier communications based on operational data.
+
+**Use Cases:**
+- Alert supervisor if machine downtime exceeds 4 hours.
+- Send automatic email to supplier if raw material stock drops below threshold.
+- Notify Slack channel if defect rate crosses 5% for a production batch.
+
+**Implementation:**
+- Use n8n.io (cloud or self-hosted).
+- Connect Webhook node to receive data from LangChain pipelines.
+- Transform data using JavaScript/Function nodes.
+- Send alerts using Gmail, Slack, or HTTP nodes.
+- Log QA outputs into Google Sheets or Airtable.
+
+**Data Sources:**
+- LangChain outputs (RAG, SQL QA, Summarization pipelines).
+
+**Files:**
+- `n8n_workflow.json`: Pre-built workflow for automation.
+- README.md explains integration with LangChain outputs.
+
+**Dependencies:**
+- n8n (cloud or local)
+- Slack / Gmail / Google Sheet integrations
+- Webhook endpoint for LangChain data
+
+---
+
+## ⚡ Getting Started
+
+1. Clone the repository:
+```bash
+git clone <repo-url>
+
