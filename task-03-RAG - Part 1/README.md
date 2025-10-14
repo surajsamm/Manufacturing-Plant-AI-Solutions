@@ -1,5 +1,6 @@
 # Task 03: RAG - Part 1 (Basic Document QA)
-<img width="718" height="504" alt="image" src="https://github.com/user-attachments/assets/fcdde9ca-33ac-4f37-8d20-70e767f34b1c" />
+<img width="1902" height="466" alt="image" src="https://github.com/user-attachments/assets/63c9ac00-ea58-4f1c-a6b1-792da06144c7" />
+
 
 ## Objective
 Enable **Q&A over machine manuals, ISO standards, and safety SOPs** using **Retrieval-Augmented Generation (RAG)** with Groq's LLaMA models.
