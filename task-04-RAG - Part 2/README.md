@@ -1,6 +1,8 @@
 
 # Task 03: RAG - Part 2 (Memory + Multi-step Retrieval)
-<img width="718" height="504" alt="image" src="https://github.com/user-attachments/assets/fcdde9ca-33ac-4f37-8d20-70e767f34b1c" />
+
+<img width="1893" height="995" alt="image" src="https://github.com/user-attachments/assets/b50e60d8-40ac-4ad7-8ecf-1a6e9323bbc4" />
+
 
 ## Objective
 Enable deeper **Q&A with memory** and **multi-turn dialogue** for manufacturing documents, ISO standards, and safety SOPs with **advanced conversational capabilities**.
