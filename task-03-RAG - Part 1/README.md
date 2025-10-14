@@ -1,5 +1,6 @@
 # Task 03: RAG - Part 1 (Basic Document QA)
-<img width="1902" height="466" alt="image" src="https://github.com/user-attachments/assets/63c9ac00-ea58-4f1c-a6b1-792da06144c7" />
+
+<img width="1269" height="562" alt="image" src="https://github.com/user-attachments/assets/4c7d5e40-dd25-4c02-8e9b-8400832dde0c" />
 
 
 ## Objective
