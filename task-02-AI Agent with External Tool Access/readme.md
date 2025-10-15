@@ -1,5 +1,8 @@
 # Multi-Step AI Agent with Groq, LangChain & LangGraph
 
+<img width="1206" height="559" alt="image" src="https://github.com/user-attachments/assets/bcbbfa3f-1c3c-4c32-8ebb-3826777d26bc" />
+
+
 This project demonstrates building a **multi-step AI agent** capable of performing calculations, fetching external data, and reasoning over structured tasks using **Groq LLM**, **LangChain**, and **LangGraph** in Python.
 
 ---
