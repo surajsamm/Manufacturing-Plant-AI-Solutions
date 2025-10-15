@@ -1,9 +1,0 @@
-langgraph
-langgraph-checkpoint-sqlite
-langchain
-langchain-google-genai
-google-generativeai
-requests
-pandas
-streamlit
-python-dotenv
