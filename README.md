@@ -9,7 +9,7 @@ Welcome to the **AI Solutions in Manufacturing Plant**! This repository contains
 
 This solution demonstrates a chatbot capable of **remembering previous interactions** to provide more contextually relevant and coherent responses. The chatbot can store user inputs and retrieve context from past conversations to enhance user experience.
 
-📂 **[Click here to explore Task 1](https://github.com/GautamAnandDS/Manufacturing-Plant-AI-Solutions/tree/master/Task%201%20Chatbot%20with%20memory)**
+📂 **[Click here to explore Task 1](https://github.com/surajsamm/Manufacturing-Plant-AI-Solutions/tree/main/task-01-Chatbot%20with%20memory)**
 
 ---
 
@@ -17,7 +17,7 @@ This solution demonstrates a chatbot capable of **remembering previous interacti
 
 This AI agent goes beyond simple conversation by **interacting with external tools** and APIs. It can perform tasks that require fetching real-time information, processing data, or integrating with other services to solve complex problems efficiently.
 
-📂 **[Click here to explore Task 2](https://github.com/GautamAnandDS/Manufacturing-Plant-AI-Solutions/tree/master/Task%202%20AI%20Agent%20with%20External%20Tool%20Access)**
+📂 **[Click here to explore Task 2](https://github.com/surajsamm/Manufacturing-Plant-AI-Solutions/tree/main/task-02-AI%20Agent%20with%20External%20Tool%20Access)**
 
 ---
 
@@ -25,10 +25,15 @@ This AI agent goes beyond simple conversation by **interacting with external too
 
 This solution implements a **Retrieval-Augmented Generation (RAG)** system for **basic document-based question answering**. The system retrieves relevant document sections to answer user queries accurately, combining retrieval and generation for robust QA capabilities.
 
-📂 **[Click here to explore Task 3](https://github.com/GautamAnandDS/Manufacturing-Plant-AI-Solutions/tree/master/Task%203%20RAG%20-%20Part%201%20(Basic%20Document%20QA))**
+📂 **[Click here to explore Task 3](https://github.com/surajsamm/Manufacturing-Plant-AI-Solutions/tree/main/task-03-RAG%20-%20Part%201)**
 
 ---
 
+### **Task 4: RAG - Part 2 (AI Agent with External Tool Access)**
+
+📂 **[Click here to explore Task 4](https://github.com/surajsamm/Manufacturing-Plant-AI-Solutions/tree/main/task-04-RAG%20-%20Part%202)**
+
+---
 ### 📁 Task 05: SQL QA System (E-commerce / Manufacturing Data)
 
 **Objective:**  
